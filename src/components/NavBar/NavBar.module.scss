@@ -1,0 +1,92 @@
+@import "/src/styles/variaveis";
+@import "/src/styles/breakpoints";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
+
+.menu {
+  display: flex;
+    padding: 20px $padding-horizontal;
+    @media (max-width: $desktop_xsm) {
+      padding: 20px $padding-horizontal-mobile;
+    }
+    @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+      padding: 20px $padding-horizontal-sm;
+    }
+    @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+      padding: 20px $padding-horizontal-md;
+    }
+    &__list {
+      align-items: center;
+      display: flex;
+			left: 631.99px;
+			position: absolute
+			
+    }
+    &__link {
+      list-style-type: none;
+      padding: 0 20px;
+      a {
+        color: $dark;
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: 600;
+				font-family: 'Open Sans', sans-serif;
+        text-decoration: none;
+				display: inline-block;
+				margin: 0;
+				transition: 0.2s;
+				&:after{
+					content: '';
+					display: block;					
+					height: 2px;
+					border-bottom: solid 3px black;
+					transition: transform 250ms ease-in-out;
+					border-radius: 11px;
+					transform: scaleX(0);
+
+				}
+        &:hover:after {
+					width: 100%;
+					transform: scale(1)
+					;
+        }
+      }
+    }
+  }
+ 
+
+.logo {
+	position: absolute;
+	width: 159px;
+	height: 60px;
+	left: 157px;
+	top: 14px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.coolLink {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.coolLink::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width .3s;
+    border-radius: 11px;
+}
+
+.coolLink:hover::after {
+    width: 100%;
+    //transition: width .9s;
+}
