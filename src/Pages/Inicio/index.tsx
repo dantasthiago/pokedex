@@ -1,4 +1,4 @@
-import BannerComplete from "../../assets/BannerComplete.png";
+import BannerComplete from "../../assets/BannerComplete.png"
 import styles from "./Inicio.module.scss";
 import { useNavigate } from 'react-router-dom';
 
